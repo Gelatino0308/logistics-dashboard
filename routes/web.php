@@ -9,5 +9,5 @@ Route::view('/proximity-form', 'dashboard.form')->name('form');
 
 Route::view('/proximity-logs', 'dashboard.logs')->name('logs');
 
-Route::post('/check-proximity', [ProximityAlertController::class, 'checkProximity'])->name('check.proximity');
+Route::post('/check-proximity', [ProximityAlertController::class, 'checkProximity'])->name('check-proximity');
 
