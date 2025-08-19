@@ -10,7 +10,7 @@
     
     <x-bladewind::notification />
 
-    <x-bladewind::card class="max-w-1/2">
+    <x-bladewind::card class="max-w-1/4">
 
         <form method="POST" class="form">
             @csrf
@@ -39,8 +39,8 @@
             />
 
             <x-bladewind::select
-                required="true"
                 name="alert_radius"
+                required="true"
                 label="Alert Radius (m)"
                 selected_value="250"
                 placeholder="Choose your preferred alert radius"
@@ -65,16 +65,18 @@
 
     </x-bladewind::card>
 
-    <script>
-        domEl('.form').addEventListener('submit', function (e){
-            e.preventDefault();
-            signUp();
-        });
 
-        signUp = () => {
-            (validateForm('.form')) ?
-                unhide('.btn-submit .bw-spinner') : 
-                hide('.btn-submit .bw-spinner'); 
-        }
-    </script>
 </x-layout>
+
+<script>
+    domEl('.form').addEventListener('submit', function (e){
+        e.preventDefault();
+        signUp();
+    });
+
+    signUp = () => {
+        (validateForm('.form')) ?
+            unhide('.btn-submit .bw-spinner') : 
+            hide('.btn-submit .bw-spinner'); 
+    }
+</script>
