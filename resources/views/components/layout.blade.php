@@ -10,7 +10,29 @@
     <script src="//unpkg.com/alpinejs" defer></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
-    
+
+<body class="text-white min-h-screen flex flex-col">
+    <nav class="h-20 px-4 grid grid-cols-2 items-center bg-black shadow-lg">
+        {{-- Logo and name --}}
+        <div class="flex justify-start">
+            <a href="" class="nav-link">
+                <x-bi-lightning-fill class="inline"/>
+                <span>PROX</span>
+            </a>
+        </div>
+
+        {{-- Nav links --}}
+        <div class="flex justify-end">
+            <div class="flex items-center gap-6">
+                <a href="{{ route('home') }}" class="nav-link">Home</a>
+                <a href="{{ route('form') }}" class="nav-link">Check Proximity</a>
+                <a href="{{ route('logs') }}" class="nav-link">Logs</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {{ $slot }}
+    </main>
 </body>
 </html>

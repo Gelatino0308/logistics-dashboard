@@ -3,13 +3,11 @@
 use App\Http\Controllers\ProximityAlertController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::view('/', 'home')->name('home');
 
-Route::get('/proximity-form', function () {
-    return view('dashboard.form');
-});
+Route::view('/proximity-form', 'dashboard.form')->name('form');
+
+Route::view('/proximity-logs', 'dashboard.logs')->name('logs');
 
 Route::post('/check-proximity', [ProximityAlertController::class, 'checkProximity'])->name('check.proximity');
 
