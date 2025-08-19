@@ -31,7 +31,7 @@
         </div>
     </nav>
 
-    <main class="py-8 px-4 max-w-screen-lg relative flex flex-col justify-center items-center flex-1 self-center w-full">
+    <main class="py-8 px-4 max-w-screen-lg relative flex justify-center items-center flex-1 self-center w-full">
         {{ $slot }}
     </main>
 </body>

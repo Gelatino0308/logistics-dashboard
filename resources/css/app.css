@@ -75,3 +75,7 @@
         @apply py-2 pl-4 border-b border-slate-900 text-base text-slate-900 font-light;
     }
 }
+
+.form-label {
+    color: #5f6368;
+}
