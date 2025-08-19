@@ -4,7 +4,7 @@ use App\Http\Controllers\ProximityAlertController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/proximity-form', function () {
