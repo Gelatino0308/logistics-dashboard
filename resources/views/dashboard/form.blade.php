@@ -8,11 +8,11 @@
         ];
     @endphp
 
-    <div class="container mx-auto px-4 py-8">
+    <div class="container mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
             <!-- Form Section -->
-            <div>
+            <div class="flex flex-col justify-center">
                 <x-bladewind::notification />
                 
                 <x-bladewind::card class="h-fit">

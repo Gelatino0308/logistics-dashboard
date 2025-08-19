@@ -95,7 +95,7 @@
 }
 
 .map-container {
-    height: 500px;
+    height: 60vh;
     border-radius: 0.5rem;
     overflow: hidden;
     border: 2px solid #e5e7eb;
@@ -107,7 +107,7 @@
 
 .warehouse-marker {
     background-color: #3b82f6;
-    border: 3px solid #ffffff;
+    border: 3px solid black;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -115,7 +115,7 @@
 
 .delivery-marker {
     background-color: #ef4444;
-    border: 3px solid #ffffff;
+    border: 3px solid black;
     border-radius: 50%;
     width: 16px;
     height: 16px;
