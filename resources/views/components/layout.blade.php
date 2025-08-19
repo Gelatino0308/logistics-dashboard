@@ -11,8 +11,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="text-white min-h-screen flex flex-col">
-    <nav class="h-20 px-4 grid grid-cols-2 items-center bg-black shadow-lg">
+<body class="text-black min-h-screen flex flex-col">
+    <nav class="h-20 px-4 grid grid-cols-2 items-center bg-black shadow-lg text-white">
         {{-- Logo and name --}}
         <div class="flex justify-start">
             <a href="" class="nav-link">
@@ -31,7 +31,7 @@
         </div>
     </nav>
 
-    <main>
+    <main class="py-8 px-4 max-w-screen-lg relative flex flex-col justify-center items-center flex-1 self-center w-full">
         {{ $slot }}
     </main>
 </body>
