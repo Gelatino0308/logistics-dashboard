@@ -1,4 +1,3 @@
-<!-- filepath: /c:/xampp/htdocs/logistics-dashboard/resources/views/dashboard/form.blade.php -->
 <x-layout title="Check Proximity">
     @php
         $radius = [
@@ -119,7 +118,7 @@
             </div>
         </div>
 
-        <!-- Results Modal (only show if there's a result) -->
+        <!-- Results Modal -->
         @if(session('proximity_result'))
             @php $result = session('proximity_result'); @endphp
             <x-bladewind::modal

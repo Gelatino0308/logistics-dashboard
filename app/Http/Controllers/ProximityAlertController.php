@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\AlertLog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use PhpParser\Node\Expr\FuncCall;
 
 class ProximityAlertController extends Controller
 {
@@ -44,6 +45,12 @@ class ProximityAlertController extends Controller
             'delivery_lat' => $fields['delivery_lat'],
             'delivery_lon' => $fields['delivery_lon']
         ])->withInput();
+    }
+
+    public function showLogs()
+    {
+        $logs = AlertLog::latest()->paginate(10);
+        return view('dashboard.logs', compact('logs'));
     }
 
 }

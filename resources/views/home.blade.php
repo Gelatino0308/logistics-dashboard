@@ -1,4 +1,4 @@
-<x-layout title="home"> 
+<x-layout title="Home"> 
     <div class="flex w-full justify-center items-center gap-18">
         <img src="{{ asset('storage/images/radar.png') }}" 
                     alt="PROX Logo"
