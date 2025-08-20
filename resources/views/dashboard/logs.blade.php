@@ -22,14 +22,14 @@
                 </x-bladewind::card>
 
                 <x-bladewind::card class="text-center">
-                    <div class="text-2xl font-bold">
+                    <div class="text-2xl font-bold text-green-500">
                         {{ $logs->where('is_within_range?', 1)->count() }}
                     </div>
                     <div class="text-sm text-gray-600">Within Range</div>
                 </x-bladewind::card>
 
                 <x-bladewind::card class="text-center">
-                    <div class="text-2xl font-bold">
+                    <div class="text-2xl font-bold text-red-500">
                         {{ $logs->where('is_within_range?', 0)->count() }}
                     </div>
                     <div class="text-sm text-gray-600">Outside Range</div>

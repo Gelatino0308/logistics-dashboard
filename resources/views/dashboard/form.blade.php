@@ -8,10 +8,10 @@
     @endphp
 
     <div class="container mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
             <!-- Form Section -->
-            <div class="flex flex-col justify-center">
+            <div class="flex flex-col justify-center items-center">
                 <x-bladewind::notification />
                 
                 <x-bladewind::card class="h-fit">
@@ -19,8 +19,8 @@
                         @csrf
 
                         <div>
-                            <h1 class="text-2xl font-bold text-gray-900 mb-2">Check Delivery Proximity</h1>
-                            <p class="text-sm text-gray-600 mb-6">
+                            <h1 class="text-3xl font-bold text-gray-900 mb-2">Check Delivery Proximity</h1>
+                            <p class="text-gray-600 mb-6">
                                 Click the map or enter the delivery coordinates and your preferred alert radius below to check distance from the warehouse.
                             </p>
                         </div>
@@ -54,6 +54,7 @@
                             selected_value="{{ old('alert_radius', '250') }}"
                             placeholder="Choose your preferred alert radius"
                             :data="$radius"
+                            class="!text-black"
                         />
 
                         <div class="text-center">
@@ -92,7 +93,7 @@
             </div>
 
             <!-- Map Section -->
-            <div>
+            <div class="col-span-2">
                 <x-bladewind::card>
                     <h2 class="text-lg font-semibold mb-4 text-gray-900">Proximity Map</h2>
                     <div id="map" class="map-container"></div>

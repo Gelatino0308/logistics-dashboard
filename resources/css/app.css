@@ -98,7 +98,7 @@
     height: 60vh;
     border-radius: 0.5rem;
     overflow: hidden;
-    border: 2px solid #e5e7eb;
+    border: 2px solid darkgray;
 }
 
 .dark .map-container {
@@ -133,4 +133,24 @@
 
 .bw-table td {
     vertical-align: middle !important;
+}
+
+.bw-input {
+    @apply !text-black !outline-primary-500;
+}
+
+.bw-input:focus {
+    @apply !border-primary-500;
+}
+
+.bw-select-items-container {
+    @apply !border-primary-500 !overflow-auto;
+}
+
+.bw-select-item:hover {
+    @apply !bg-primary-600;
+}
+
+.bw-button:focus {
+    @apply !ring-primary-400;
 }

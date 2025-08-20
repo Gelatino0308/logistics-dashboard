@@ -19,13 +19,13 @@
 </head>
 
 <body class="text-black min-h-screen flex flex-col">
-    <nav class="h-20 px-4 grid grid-cols-2 items-center bg-black shadow-lg text-white">
+    <nav class="h-20 px-6 grid grid-cols-2 justify-center items-center bg-black shadow-lg text-white">
         {{-- Logo and name --}}
-        <div class="flex justify-start">
-            <a href="" class="nav-link">
-                <x-bi-lightning-fill class="inline"/>
-                <span>PROX</span>
-            </a>
+        <div class="flex justify-start items-center gap-2">
+            <div>
+                <x-zondicon-radar class="!w-8"/>
+            </div>
+            <span class="text-xl font-medium">PROX</span>
         </div>
 
         {{-- Nav links --}}
