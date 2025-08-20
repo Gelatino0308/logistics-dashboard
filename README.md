@@ -1,61 +1,125 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# PROX
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+PROX is an AI-Powered Proximity Alert System designed for warehouse deliveries. It provides real-time distance calculations and proximity alerts to help logistics managers monitor delivery locations relative to warehouse positions, ensuring efficient delivery operations and enhanced security monitoring.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Proximity Analysis
+- Interactive map interface with click-to-set delivery locations
+- Real-time distance calculation between warehouse and delivery points
+- Customizable alert radius settings (100m, 250m, 500m)
+- Visual proximity indicators with color-coded alerts
+- Coordinate input validation and error handling
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Dashboard Interface
+- Proximity check form with intuitive controls
+- Live map visualization with warehouse and delivery markers
+- Results display with success/error status indicators
+- Alert history and logging system
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Alert Management
+- Automated proximity status detection
+- Alert logging with timestamp and location data
 
-## Learning Laravel
+## Technologies Used
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Backend
+- **Laravel 12** 
+- **PHP 8.2** 
+- **MySQL 8.0** 
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Frontend
+- **Blade Templates** 
+- **JavaScript (ES6+)**
+- **Tailwind CSS v4**
+- **BladeWind UI Components**
+- **Blade-ui-kit Icons**
+- **Leaflet.js** 
+- **OpenStreetMap**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Development Environment
+- **Composer** 
+- **Node.js & NPM** 
+- **XAMPP** 
 
-## Laravel Sponsors
+## Setup Steps
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Prerequisites
+- PHP 8.1 or higher
+- Composer
+- Node.js and NPM
+- MySQL 8.0 or higher
+- Git
 
-### Premium Partners
+### Installation
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Gelatino0308/logistics-dashboard
+   cd logistics-dashboard
+   ```
+2. **Install PHP dependencies**
+   ```bash
+   composer install
+   ```
+3. **Install Node.js dependencies**
+   ```bash
+   npm install
+   ```
+4. **Environment setup**
+   ```bash
+   cp .env.example .env
+   ```
+5. **Configure your .env file**
+   ```bash
+   APP_NAME=PROX
+   APP_ENV=local
+   APP_KEY=
+   APP_DEBUG=true
+   APP_URL=http://localhost:8000
 
-## Contributing
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=prox_db
+   DB_USERNAME=your_username
+   DB_PASSWORD=your_password
+   ```
+6. **Generate application key**
+   ```bash
+   php artisan key:generate
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+7. **Create database**
+- Create a MySQL database named prox_db
+- Update your .env file with the correct database credentials
 
-## Code of Conduct
+8. Run database migrations
+   ```bash
+   php artisan migrate:fresh
+   ```
+9. Create storage symlink
+   ```bash
+   php artisan storage:link
+   ```
+10. Compile frontend assets
+   ```bash
+   npm run build
+   ```
+11. Start the development server
+   ```bash
+   php artisan serve
+   ```
+12. Access the application
+   ```bash
+   Open your browser and visit http://localhost:8000
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### API Integration
+This project utilizes a Flask-based proximity calculation API that has been deployed on Render. The API handles the mathematical calculations for distance measurements and proximity analysis.
 
-## Security Vulnerabilities
+- **API Repository**: https://github.com/Gelatino0308/flask-proximity-api.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- **Deployed Service**: The Flask API is hosted on Render (https://flask-proximity-api-53t9.onrender.com/check_proximity) and provides real-time proximity calculations. 
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- **Integration**: The Laravel application communicates with this external API to perform distance calculations between warehouse and delivery coordinates.
