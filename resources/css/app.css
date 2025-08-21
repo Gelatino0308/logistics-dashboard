@@ -46,36 +46,6 @@
     --color-gray-950: #000000;
 }
 
-@layer components {
-    .round-btn {
-        @apply w-9 h-9 overflow-auto rounded-full bg-slate-100 focus:outline-none focus:ring-1 focus:ring-slate-100 focus:ring-offset-2 focus:ring-offset-slate-800;
-    }
-    .nav-link {
-        @apply active:bg-slate-900 hover:bg-white/15 text-slate-100 px-3 py-1 rounded-lg text-lg;
-    }
-    .title {
-        @apply text-3xl mb-4 font-bold;
-    }
-    .btn {
-        @apply relative enabled:bg-slate-800 enabled:active:bg-slate-900 enabled:hover:bg-slate-700 p-2 rounded-md text-white block w-full disabled:bg-slate-500 disabled:cursor-wait;
-    }
-    .error {
-        @apply text-xs text-red-700 mt-px;
-    }
-    .input {
-        @apply block w-full p-2 rounded-md ring-1 ring-slate-600 focus:ring-slate-900 focus:ring-2 outline-0 border-0 mt-1 text-black bg-slate-200;
-    }
-    label {
-        @apply text-sm text-slate-800;
-    }
-    .card {
-        @apply bg-[#ff640a] p-6 rounded-lg shadow-lg shadow-orange-800;
-    }
-    .username {
-        @apply py-2 pl-4 border-b border-slate-900 text-base text-slate-900 font-light;
-    }
-}
-
 .form-label {
     color: #5f6368;
 }
@@ -129,6 +99,11 @@
 .leaflet-popup-content {
     margin: 12px 16px;
     font-size: 14px;
+}
+
+
+.nav-link {
+    @apply active:bg-slate-900 hover:bg-white/15 text-slate-100 px-3 py-1 rounded-lg text-lg;
 }
 
 .bw-table td {
